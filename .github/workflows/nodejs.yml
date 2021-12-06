@@ -8,6 +8,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - run: yarn install
+    - run: yarn test
       env:
         CI: true
         REACT_APP_SUPABASE_URL: ${{ secrets.REACT_APP_SUPABASE_URL }}
