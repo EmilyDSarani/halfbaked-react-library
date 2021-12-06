@@ -18,8 +18,8 @@ function BookDetail() {
     <>
       <Book book={book} showDetail />
       <p>
-        <Link to="/teams" className="App-link">
-          Back to Teams
+        <Link to="/books" className="App-link">
+          Back to Books
         </Link>
       </p>
     </>
