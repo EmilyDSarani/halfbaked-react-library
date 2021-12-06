@@ -1,14 +1,27 @@
-import BookList from './views/Books/BookList'
+import { BrowserRouter as Router, Switch, Route, NavLink } from 'react-router-dom'
+import Home from './views/Home/Home'
 import BookDetail from './views/Books/BookDetail'
 import './App.css'
 
 function App() {
   // TODO: Add routes to books & views
   return (
-    <main className="container">
-      <h1>Library Catalog</h1>
-      <BookList />
-    </main>
+    <div className="App">
+      <Router>
+        <header>
+          <NavLink exact className="App-link" to="/">
+            Home
+          </NavLink>
+          <NavLink exact className="App-link" to="/bookdetail">
+            Book Details
+          </NavLink>
+        </header>
+        <Switch>
+          <Route path="/" exact component={Home} />
+          <Route path="/bookdetail" component={BookDetail} />
+        </Switch>
+      </Router>
+    </div>
   )
 }
 
