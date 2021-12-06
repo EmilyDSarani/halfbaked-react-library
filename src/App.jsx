@@ -3,6 +3,7 @@ import Home from './views/Home/Home'
 import BookDetail from './views/Books/BookDetail'
 import './App.css'
 
+// WHY ARE YOU MAD
 function App() {
   // TODO: Add routes to books & views
   return (
