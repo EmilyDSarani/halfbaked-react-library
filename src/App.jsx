@@ -2,8 +2,8 @@ import { BrowserRouter as Router, Switch, Route, NavLink } from 'react-router-do
 import Home from './views/Home/Home'
 import BookList from './views/Books/BookList'
 import './App.css'
+import BookDetail from './views/Books/BookDetail'
 
-// WHY ARE YOU MAD
 function App() {
   // Done
   return (
@@ -13,13 +13,14 @@ function App() {
           <NavLink exact className="App-link" to="/">
             Home
           </NavLink>
-          <NavLink exact className="App-link" to="/booklist">
+          <NavLink exact className="App-link" to="/books">
             Book List
           </NavLink>
         </header>
         <Switch>
           <Route path="/" exact component={Home} />
-          <Route path="/booklist" component={BookList} />
+          <Route path="/books" exact component={BookList} />
+          <Route path="/books/:id" component={BookDetail} />
         </Switch>
       </Router>
     </div>
